@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming | ECE Learning Hub</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f4ff;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(120deg, #172554, #4338a8);
+            color: white;
+            text-align: center;
+            padding: 40px 15px;
+        }
+
+        nav {
+            background: #1e1b4b;
+            text-align: center;
+            padding: 14px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .lesson {
+            background: white;
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #00000012;
+        }
+
+        h2 { color: #4338a8; }
+
+        pre {
+            background: #172554;
+            color: #e0e7ff;
+            padding: 18px;
+            border-radius: 9px;
+            overflow-x: auto;
+        }
+
+        .note {
+            background: #eef2ff;
+            padding: 15px;
+            border-left: 4px solid #4338a8;
+            border-radius: 6px;
+        }
+
+        button {
+            background: #4338a8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 6px;
+        }
+
+        #quizResult {
+            font-weight: bold;
+        }
+
+        footer {
+            background: #1e1b4b;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Python Programming</h1>
+    <p>Start Your Python Journey From Zero</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#intro">Introduction</a>
+    <a href="#variables">Variables</a>
+    <a href="#conditions">Conditions</a>
+    <a href="#loops">Loops</a>
+    <a href="#quiz">Quiz</a>
+</nav>
+
+<div class="container">
+
+    <section class="lesson" id="intro">
+        <h2>1. What is Python?</h2>
+
+        <p>
+            Python is a high-level, general-purpose
+            programming language. It is popular for
+            web development, automation, data science
+            and artificial intelligence.
+        </p>
+
+        <p><b>Features:</b></p>
+        <ul>
+            <li>Easy-to-read syntax</li>
+            <li>Beginner friendly</li>
+            <li>Large collection of libraries</li>
+            <li>Used in AI and Machine Learning</li>
+        </ul>
+
+        <p><b>Telugu:</b> Python anedhi easy ga nerchukogala
+        programming language. Dheenitho websites,
+        applications and AI programs create cheyochu.</p>
+    </section>
+
+    <section class="lesson">
+        <h2>2. Your First Python Program</h2>
+
+        <pre>
+print("Hello World!")
+        </pre>
+
+        <p><b>Output:</b> Hello World!</p>
+
+        <p>
+            The print() function displays information
+            on the screen.
+        </p>
+
+        <p><b>Telugu:</b> Screen meedha message display
+        cheyadaniki print() use chestham.</p>
+    </section>
+
+    <section class="lesson" id="variables">
+        <h2>3. Variables</h2>
+
+        <p>
+            A variable is a name used to store data.
+        </p>
+
+        <pre>
+name = "Ammu"
+age = 22
+marks = 85.5
+
+print(name)
+print(age)
+print(marks)
+        </pre>
+
+        <p><b>Telugu:</b> Data ni store cheyadaniki
+        variables use chestham.</p>
+    </section>
+
+    <section class="lesson">
+        <h2>4. Python Data Types</h2>
+
+        <ul>
+            <li><b>int</b> - Whole numbers (10, 20)</li>
+            <li><b>float</b> - Decimal numbers (10.5)</li>
+            <li><b>str</b> - Text ("Hello")</li>
+            <li><b>bool</b> - True or False</li>
+        </ul>
+
+        <pre>
+age = 20
+price = 25.5
+name = "Ravi"
+is_student = True
+        </pre>
+    </section>
+
+    <section class="lesson">
+        <h2>5. Operators</h2>
+
+        <ul>
+            <li>+ Addition</li>
+            <li>- Subtraction</li>
+            <li>* Multiplication</li>
+            <li>/ Division</li>
+            <li>% Remainder</li>
+            <li>** Power</li>
+        </ul>
+
+        <pre>
+a = 10
+b = 5
+
+print(a + b)
+print(a * b)
+        </pre>
+
+        <p><b>Output:</b> 15 and 50</p>
+    </section>
+
+    <section class="lesson" id="conditions">
+        <h2>6. If-Else Conditions</h2>
+
+        <p>Conditions help a program make decisions.</p>
+
+        <pre>
+age = 18
+
+if age >= 18:
+    print("Eligible")
+else:
+    print("Not Eligible")
+        </pre>
+
+        <p><b>Telugu:</b> Condition True ayithe if block,
+        False ayithe else block execute avuthundhi.</p>
+    </section>
+
+    <section class="lesson" id="loops">
+        <h2>7. Loops</h2>
+
+        <p>Loops repeat a set of instructions.</p>
+
+        <h3>For Loop</h3>
+
+        <pre>
+for i in range(1, 6):
+    print(i)
+        </pre>
+
+        <p><b>Output:</b> 1 2 3 4 5</p>
+
+        <h3>While Loop</h3>
+
+        <pre>
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+        </pre>
+    </section>
+
+    <section class="lesson">
+        <h2>8. Functions</h2>
+
+        <p>
+            A function is a reusable block of code.
+        </p>
+
+        <pre>
+def greet():
+    print("Welcome to Python")
+
+greet()
+        </pre>
+
+        <p><b>Telugu:</b> Oka task ni malli malli use
+        cheyadaniki functions help chesthayi.</p>
+    </section>
+
+    <section class="lesson">
+        <h2>9. Lists</h2>
+
+        <p>A list stores multiple values in one variable.</p>
+
+        <pre>
+subjects = ["C", "Python", "Electronics"]
+
+print(subjects[0])
+        </pre>
+
+        <p><b>Output:</b> C</p>
+    </section>
+
+    <section class="lesson" id="quiz">
+        <h2>10. Test Your Knowledge</h2>
+
+        <p>Which function displays output in Python?</p>
+
+        <button onclick="checkAnswer('print')">print()</button>
+        <button onclick="checkAnswer('input')">input()</button>
+        <button onclick="checkAnswer('type')">type()</button>
+
+        <p id="quizResult"></p>
+    </section>
+
+    <section class="lesson">
+        <h2>11. Practice Exercises</h2>
+
+        <ol>
+            <li>Print your name.</li>
+            <li>Add two numbers.</li>
+            <li>Find whether a number is even or odd.</li>
+            <li>Print numbers from 1 to 10.</li>
+            <li>Create a function to multiply two numbers.</li>
+        </ol>
+    </section>
+
+</div>
+
+<footer>
+    <p>ECE Learning Hub | Learn Today, Build Tomorrow!</p>
+</footer>
+
+<script>
+    function checkAnswer(answer) {
+        let result = document.getElementById("quizResult");
+
+        if (answer === "print") {
+            result.innerText = "Correct! Excellent work!";
+            result.style.color = "green";
+        } else {
+            result.innerText = "Try again! print() displays output.";
+            result.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>

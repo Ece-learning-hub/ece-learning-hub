@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Electronics - ECE Learning Hub</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f4ff;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(120deg, #172554, #4338a8);
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        nav {
+            background: #1e1b4b;
+            padding: 13px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .lesson {
+            background: white;
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #00000012;
+        }
+
+        h2 {
+            color: #4338a8;
+        }
+
+        .example {
+            background: #eef2ff;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid #c7c7d8;
+            padding: 10px;
+        }
+
+        th {
+            background: #4338a8;
+            color: white;
+        }
+
+        button {
+            background: #4338a8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 6px;
+        }
+
+        button:hover {
+            background: #312e81;
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 6px;
+            margin: 8px;
+        }
+
+        #gateResult, #quizResult {
+            font-weight: bold;
+            color: #166534;
+            margin-top: 15px;
+        }
+
+        footer {
+            background: #1e1b4b;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Digital Electronics</h1>
+    <p>Learn Logic Gates and Digital Circuits</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#binary">Binary</a>
+    <a href="#gates">Logic Gates</a>
+    <a href="#quiz">Quiz</a>
+</nav>
+
+<div class="container">
+
+    <section class="lesson">
+        <h2>1. What is Digital Electronics?</h2>
+        <p>
+            Digital Electronics is a branch of electronics that
+            works with digital signals. It uses two values:
+            0 and 1.
+        </p>
+        <p><b>Telugu:</b> Digital Electronics lo mainly 0 and 1 ane
+        rendu values use chestham.</p>
+    </section>
+
+    <section class="lesson" id="binary">
+        <h2>2. Binary Number System</h2>
+        <p>
+            The binary number system uses only two digits:
+            0 and 1.
+        </p>
+        <div class="example">
+            Example: 0 = OFF, 1 = ON
+        </div>
+        <p><b>Telugu:</b> Binary system lo 0 ante OFF,
+        1 ante ON.</p>
+    </section>
+
+    <section class="lesson" id="gates">
+        <h2>3. Logic Gates</h2>
+        <p>
+            Logic gates are basic building blocks of digital circuits.
+            The three basic gates are AND, OR and NOT.
+        </p>
+
+        <h3>AND Gate</h3>
+        <p>Output is 1 only when both inputs are 1.</p>
+        <p><b>Telugu:</b> Rendu inputs 1 unte matrame output 1.</p>
+
+        <table>
+            <tr><th>A</th><th>B</th><th>Output</th></tr>
+            <tr><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>0</td><td>1</td><td>0</td></tr>
+            <tr><td>1</td><td>0</td><td>0</td></tr>
+            <tr><td>1</td><td>1</td><td>1</td></tr>
+        </table>
+
+        <h3>OR Gate</h3>
+        <p>Output is 1 when at least one input is 1.</p>
+        <p><b>Telugu:</b> E input aina 1 unte output 1.</p>
+
+        <table>
+            <tr><th>A</th><th>B</th><th>Output</th></tr>
+            <tr><td>0</td><td>0</td><td>0</td></tr>
+            <tr><td>0</td><td>1</td><td>1</td></tr>
+            <tr><td>1</td><td>0</td><td>1</td></tr>
+            <tr><td>1</td><td>1</td><td>1</td></tr>
+        </table>
+
+        <h3>NOT Gate</h3>
+        <p>NOT gate gives the opposite of its input.</p>
+        <p><b>Telugu:</b> Input 0 unte output 1, input 1 unte output 0.</p>
+
+        <table>
+            <tr><th>Input</th><th>Output</th></tr>
+            <tr><td>0</td><td>1</td></tr>
+            <tr><td>1</td><td>0</td></tr>
+        </table>
+    </section>
+
+    <section class="lesson">
+        <h2>4. Try a Logic Gate</h2>
+        <p>Select a gate and give two inputs to see its output.</p>
+
+        <label for="gate">Choose Gate:</label>
+        <select id="gate">
+            <option value="AND">AND</option>
+            <option value="OR">OR</option>
+            <option value="NOT">NOT</option>
+        </select>
+
+        <br>
+
+        <label for="inputA">Input A:</label>
+        <select id="inputA">
+            <option value="0">0</option>
+            <option value="1">1</option>
+        </select>
+
+        <label for="inputB">Input B:</label>
+        <select id="inputB">
+            <option value="0">0</option>
+            <option value="1">1</option>
+        </select>
+
+        <br>
+
+        <button onclick="calculateGate()">Calculate Output</button>
+
+        <p id="gateResult">Your output will appear here.</p>
+    </section>
+
+    <section class="lesson" id="quiz">
+        <h2>5. Test Your Knowledge</h2>
+        <p>Which logic gate gives the opposite output?</p>
+
+        <button onclick="checkAnswer('AND')">AND Gate</button>
+        <button onclick="checkAnswer('OR')">OR Gate</button>
+        <button onclick="checkAnswer('NOT')">NOT Gate</button>
+
+        <p id="quizResult"></p>
+    </section>
+
+    <section class="lesson">
+        <h2>6. What Did We Learn?</h2>
+        <ul>
+            <li>Digital Electronics uses 0 and 1.</li>
+            <li>AND gate needs both inputs to be 1.</li>
+            <li>OR gate needs at least one input to be 1.</li>
+            <li>NOT gate reverses the input.</li>
+        </ul>
+    </section>
+
+</div>
+
+<footer>
+    <p>ECE Learning Hub | Learn Today, Build Tomorrow!</p>
+</footer>
+
+<script>
+    function calculateGate() {
+        let gate = document.getElementById("gate").value;
+        let a = Number(document.getElementById("inputA").value);
+        let b = Number(document.getElementById("inputB").value);
+        let output;
+
+        if (gate === "AND") {
+            output = a && b ? 1 : 0;
+        }
+        else if (gate === "OR") {
+            output = a || b ? 1 : 0;
+        }
+        else {
+            output = a === 0 ? 1 : 0;
+        }
+
+        document.getElementById("gateResult").innerText =
+            "Output = " + output;
+    }
+
+    function checkAnswer(answer) {
+        if (answer === "NOT") {
+            document.getElementById("quizResult").innerText =
+                "Correct! Excellent work!";
+        } else {
+            document.getElementById("quizResult").innerText =
+                "Try again! Think about the opposite output.";
+        }
+    }
+</script>
+
+</body>
+</html>

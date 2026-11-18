@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication Systems | ECE Learning Hub</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5ff;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(120deg, #172554, #4338a8);
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        nav {
+            background: #1e1b4b;
+            text-align: center;
+            padding: 14px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .lesson {
+            background: white;
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        h2 {
+            color: #4338a8;
+        }
+
+        .note {
+            background: #eef2ff;
+            padding: 15px;
+            border-left: 4px solid #4338a8;
+            border-radius: 6px;
+        }
+
+        button {
+            background: #4338a8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #result {
+            font-weight: bold;
+        }
+
+        footer {
+            background: #1e1b4b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Communication Systems</h1>
+    <p>Learn How Information Travels!</p>
+</header>
+
+<nav>
+    <a href="index.html">← Back to Home</a>
+</nav>
+
+<div class="container">
+
+    <section class="lesson">
+        <h2>1. Introduction to Communication Systems</h2>
+
+        <p>
+            A communication system is used to transfer information
+            from one place to another.
+        </p>
+
+        <p><b>Examples:</b> Mobile phones, television, radio and internet.</p>
+
+        <div class="note">
+            <b>Telugu:</b> Oka place nundi inko place ki information
+            pampinchadaniki use chese system ni Communication System antaru.
+        </div>
+    </section>
+
+    <section class="lesson">
+        <h2>2. Basic Blocks of Communication</h2>
+
+        <ol>
+            <li><b>Information Source:</b> Creates the message.</li>
+            <li><b>Transmitter:</b> Prepares and sends the signal.</li>
+            <li><b>Channel:</b> Medium through which the signal travels.</li>
+            <li><b>Receiver:</b> Receives and processes the signal.</li>
+            <li><b>Destination:</b> Gets the final information.</li>
+        </ol>
+
+        <div class="note">
+            Source → Transmitter → Channel → Receiver → Destination
+        </div>
+    </section>
+
+    <section class="lesson">
+        <h2>3. Signals</h2>
+
+        <h3>Analog Signal</h3>
+        <p>
+            An analog signal changes continuously with time.
+            Example: Traditional radio audio signals.
+        </p>
+
+        <h3>Digital Signal</h3>
+        <p>
+            A digital signal represents information using
+            discrete values, commonly 0 and 1.
+            Example: Digital data in computers.
+        </p>
+    </section>
+
+    <section class="lesson">
+        <h2>4. Modulation</h2>
+
+        <p>
+            Modulation is the process of changing a property
+            of a carrier signal according to the information signal.
+        </p>
+
+        <h3>Types of Analog Modulation</h3>
+
+        <ul>
+            <li><b>AM:</b> Amplitude Modulation.</li>
+            <li><b>FM:</b> Frequency Modulation.</li>
+            <li><b>PM:</b> Phase Modulation.</li>
+        </ul>
+
+        <div class="note">
+            <b>Telugu:</b> Information signal ni carrier signal
+            tho combine chesi transmit cheyadaniki modulation use chestaru.
+        </div>
+    </section>
+
+    <section class="lesson">
+        <h2>5. Demodulation</h2>
+
+        <p>
+            Demodulation is the process of extracting the
+            original information signal from the received modulated signal.
+        </p>
+
+        <p>
+            Example: A radio receiver extracts audio information
+            from a received radio signal.
+        </p>
+    </section>
+
+    <section class="lesson">
+        <h2>6. Antennas</h2>
+
+        <p>
+            An antenna is a device used to transmit or receive
+            electromagnetic waves.
+        </p>
+
+        <p><b>Applications:</b></p>
+        <ul>
+            <li>Mobile communication</li>
+            <li>Satellite communication</li>
+            <li>Radio and television</li>
+            <li>Wireless networks</li>
+        </ul>
+    </section>
+
+    <section class="lesson">
+        <h2>7. Applications of Communication Systems</h2>
+
+        <ul>
+            <li>Mobile phones</li>
+            <li>Wi-Fi and Bluetooth</li>
+            <li>Satellite communication</li>
+            <li>Television broadcasting</li>
+            <li>Radio broadcasting</li>
+        </ul>
+    </section>
+
+    <section class="lesson">
+        <h2>8. Practice Quiz</h2>
+
+        <p>Which type of signal changes continuously with time?</p>
+
+        <button onclick="checkAnswer('analog')">Analog</button>
+        <button onclick="checkAnswer('digital')">Digital</button>
+
+        <p id="result"></p>
+    </section>
+
+</div>
+
+<footer>
+    <p>ECE Learning Hub | Keep Learning!</p>
+</footer>
+
+<script>
+    function checkAnswer(answer) {
+        let result = document.getElementById("result");
+
+        if (answer === "analog") {
+            result.innerText = "Correct! Well done!";
+            result.style.color = "green";
+        } else {
+            result.innerText = "Try again! The correct answer is Analog.";
+            result.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>

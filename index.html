@@ -1,0 +1,1112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECE Learning Hub</title>
+
+<style>
+
+/* Mobile-friendly website design */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 25px 12px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 7px;
+        font-size: 14px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 12px auto;
+    }
+
+    input, select, button {
+        max-width: 100%;
+    }
+
+    section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7ff;
+    color: #1e293b;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(120deg, #101c46, #4935a8);
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #67e8f9;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #67e8f9;
+}
+
+/* HERO */
+.hero {
+    min-height: 430px;
+    padding: 100px 8%;
+    background: linear-gradient(120deg, #182c65, #6545bd);
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero button {
+    margin-top: 30px;
+    padding: 14px 30px;
+    background: #67e8f9;
+    color: #101c46;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* GENERAL SECTIONS */
+section.content {
+    padding: 65px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    color: #182c65;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 35px;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px 22px;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px rgba(30, 41, 59, 0.08);
+    transition: 0.3s;
+    border: 1px solid #e5e7eb;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(67, 56, 202, 0.15);
+}
+
+.card .icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #4338a8;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* CALCULATOR */
+.calculator {
+    background: #e8edff;
+}
+
+.calculator-box {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px rgba(30, 41, 59, 0.08);
+    text-align: center;
+}
+
+.calculator-box input {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.calculator-box button {
+    padding: 12px 25px;
+    background: #4338a8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    color: #16834a;
+}
+
+/* FOOTER */
+footer {
+    background: #101c46;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    line-height: 1.8;
+}
+
+@media (max-width: 650px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}
+</style>
+</head>
+<section style="text-align:center; padding:30px; background:#eef2ff;">
+    <h2>Student Dashboard</h2>
+    <p>Manage student learning and registrations.</p>
+
+    <a href="student-dashboard.html"
+       style="background:#4338a8; color:white;
+       padding:12px 22px; border-radius:8px;
+       text-decoration:none;">
+       Open Dashboard →
+    </a>
+</section>
+<body>
+
+<section style="
+    text-align:center;
+    padding:40px 20px;
+    background:#eef2ff;
+">
+    <h2 style="color:#4338a8;">
+        Join ECE Learning Hub
+    </h2>
+
+    <p>Register and start your learning journey!</p>
+
+    <a href="registration.html"
+       style="
+       display:inline-block;
+       background:#4338a8;
+       color:white;
+       padding:14px 25px;
+       border-radius:8px;
+       text-decoration:none;
+       font-weight:bold;
+       ">
+        Student Registration →
+    </a>
+</section>
+
+<header>
+    <div class="logo">ECE <span>Learning Hub</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#programming">Programming</a>
+        <a href="#calculators">Calculators</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Welcome to ECE Learning Hub!</h1>
+    <p>
+        Learn Electronics, Programming and Technology
+        with easy explanations in English and Telugu.
+        Start your journey towards a brighter technical future.
+    </p>
+
+    <button onclick="document.getElementById('subjects').scrollIntoView()">
+        Start Learning →
+    </button>
+</section>
+<div class="search-container">
+    <h2>What do you want to learn today?</h2>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search electronics, programming..."
+        onkeyup="searchTopics()"
+    >
+
+    <p id="searchMessage"></p>
+</div>
+
+
+<section class="content" id="subjects">
+    <h2 class="section-title">Explore Electronics Subjects</h2>
+    <p class="section-description">Build your electronics knowledge step by step.</p>
+
+    <div class="cards">
+.</p>
+<div class="card">
+    <div class="icon">⚡</div>
+
+    <h3>Basic Electronics</h3>
+
+    <p>
+        Learn voltage, current, resistance,
+        diodes and transistors.
+    </p>
+
+    <a href="basic-electronics.html">
+        Start Learning →
+    </a>
+</div>
+
+        </div>
+
+        <div class="card">
+            <div class="icon">🔌</div>
+            <h3>Electrical Basics</h3>
+            <p>Understand Ohm's law, circuits, power and electrical concepts.</p>
+        </div>
+
+        <<div class="card">
+    <div class="icon">🔢</div>
+    <h3>Digital Electronics</h3>
+    <p>
+        Learn binary numbers, logic gates,
+        truth tables and digital circuits.
+    </p>
+    <a href="digital-electronics.html">
+        Start Learning →
+    </a>
+</div>
+        </div>
+
+        <div class="card">
+            <div class="icon">📡</div>
+            <h3>Communication Systems</h3>
+            <p>Learn signals, modulation and communication fundamentals.</p>
+        </div>
+    </div>
+</section>
+
+<section class="content" id="programming">
+    <h2 class="section-title">Programming Courses</h2>
+    <p class="section-description">Develop coding skills from beginner to advanced.</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="icon">🔵</div>
+            <h3>C Programming</h3>
+            <p>Start with variables, operators, loops, functions and programs.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🐍</div>
+            <h3>Python Programming</h3>
+            <p>Learn Python basics, problem solving and practical projects.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🤖</div>
+            <h3>AI & Machine Learning</h3>
+            <p>Discover artificial intelligence and machine learning concepts.</p>
+        </div>
+    </div>
+</section>
+
+<section class="content calculator" id="calculators">
+    <h2 class="section-title">Electronics Calculator</h2>
+    <p class="section-description">Calculate current using Ohm's Law.</p>
+
+    <div class="calculator-box">
+        <h3>⚡ Ohm's Law Calculator</h3>
+
+        <input type="number" id="voltage" placeholder="Enter Voltage (V)">
+        <input type="number" id="resistance" placeholder="Enter Resistance (Ω)">
+
+        <button onclick="calculateCurrent()">Calculate Current</button>
+
+        <h3 id="result">Your result will appear here.</h3>
+    </div>
+</section>
+
+<section class="content" id="about">
+    <h2 class="section-title">About ECE Learning Hub</h2>
+    <p class="section-description">
+        ECE Learning Hub is a learning platform designed to help
+        diploma and engineering students understand electronics,
+        programming and modern technology in a simple way.
+        Our goal is to make technical education accessible to everyone.
+    </p>
+</section>
+
+<footer>
+    <h3>ECE Learning Hub</h3>
+    <p>Learn Today. Build Tomorrow.</p>
+    <p>© 2026 ECE Learning Hub. All rights reserved.</p>
+</footer>
+
+<script>
+function calculateCurrent() {
+    let voltage = Number(document.getElementById("voltage").value);
+    let resistance = Number(document.getElementById("resistance").value);
+
+    if (document.getElementById("voltage").value === "" ||
+        document.getElementById("resistance").value === "") {
+        document.getElementById("result").innerHTML =
+            "Please enter both values.";
+    }
+    else if (voltage < 0 || resistance <= 0) {
+        document.getElementById("result").innerHTML =
+            "Please enter valid values.";
+    }
+    else {
+        let current = voltage / resistance;
+
+        document.getElementById("result").innerHTML =
+            "Current = " + current.toFixed(2) + " A";
+    }
+}
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resistor Colour Code Calculator</title>
+
+<style>
+
+.search-container {
+    text-align: center;
+    padding: 35px 15px;
+    background: white;
+}
+
+.search-container h2 {
+    color: #4338a8;
+    margin-bottom: 18px;
+}
+
+.search-container input {
+    width: 90%;
+    max-width: 550px;
+    padding: 15px;
+    border: 2px solid #c7d2fe;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-container input:focus {
+    border-color: #4338a8;
+}
+
+#searchMessage {
+    margin-top: 12px;
+    color: #dc2626;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0e7ff, #f5f3ff);
+    color: #1e293b;
+    padding: 30px 15px;
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(30, 41, 59, 0.12);
+}
+
+h1 {
+    text-align: center;
+    color: #4338a8;
+    margin-bottom: 12px;
+}
+
+.description {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* RESISTOR DESIGN */
+
+.resistor {
+    height: 100px;
+    width: 320px;
+    max-width: 100%;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.wire {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #94a3b8;
+    z-index: 0;
+}
+
+.body {
+    width: 200px;
+    height: 65px;
+    background: #e8c58b;
+    border: 2px solid #b78c51;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.band {
+    width: 17px;
+    height: 100%;
+    background: black;
+}
+
+/* INPUT AREA */
+
+.band-selection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 9px;
+    color: #334155;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: 9px;
+    font-size: 15px;
+    background: white;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+/* BUTTON */
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background: linear-gradient(120deg, #4338a8, #7c3aed);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* RESULT */
+
+.result {
+    margin-top: 25px;
+    padding: 25px;
+    background: #eef2ff;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.result h2 {
+    color: #4338a8;
+    margin-bottom: 10px;
+}
+
+#answer {
+    font-size: 27px;
+    font-weight: bold;
+    color: #15803d;
+}
+
+#toleranceResult {
+    margin-top: 10px;
+    color: #475569;
+}
+
+.info {
+    margin-top: 25px;
+    padding: 18px;
+    background: #f8fafc;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #64748b;
+}
+
+@media(max-width: 500px) {
+    .container {
+        padding: 22px 16px;
+    }
+
+    .band-selection {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Resistor Colour Code Calculator</h1>
+
+    <p class="description">
+        Select the four colour bands of your resistor
+        to calculate its resistance value.
+    </p>
+
+    <!-- RESISTOR VISUAL -->
+
+    <div class="resistor">
+        <div class="wire"></div>
+
+        <div class="body">
+            <div class="band" id="visual1"></div>
+            <div class="band" id="visual2"></div>
+            <div class="band" id="visual3"></div>
+            <div class="band" id="visual4"></div>
+        </div>
+    </div>
+
+    <!-- COLOUR SELECTION -->
+
+    <div class="band-selection">
+
+        <div>
+            <label>First Band (First Digit)</label>
+            <select id="band1"></select>
+        </div>
+
+        <div>
+            <label>Second Band (Second Digit)</label>
+            <select id="band2"></select>
+        </div>
+
+        <div>
+            <label>Third Band (Multiplier)</label>
+            <select id="band3"></select>
+        </div>
+
+        <div>
+            <label>Fourth Band (Tolerance)</label>
+            <select id="band4"></select>
+        </div>
+
+    </div>
+
+    <button onclick="calculateResistance()">
+        Calculate Resistance
+    </button>
+
+    <!-- RESULT -->
+
+    <div class="result">
+        <h2>Resistance Value</h2>
+
+        <p id="answer">Your result will appear here</p>
+
+        <p id="toleranceResult"></p>
+    </div>
+
+    <div class="info">
+        <h3>How to calculate?</h3>
+        <p><b>Formula:</b> (First digit × 10 + Second digit) × Multiplier</p>
+        <p><b>Example:</b> Brown - Black - Brown - Gold</p>
+        <p>10 × 10 = 100 Ω ±5%</p>
+    </div>
+
+    <footer>
+        <p>ECE Learning Hub | Learn Electronics Easily</p>
+    </footer>
+
+</div>
+
+<script>
+
+// Colour information
+const colours = [
+    {name: "Black", value: 0, hex: "#000000"},
+    {name: "Brown", value: 1, hex: "#8B4513"},
+    {name: "Red", value: 2, hex: "#FF0000"},
+    {name: "Orange", value: 3, hex: "#FFA500"},
+    {name: "Yellow", value: 4, hex: "#FFFF00"},
+    {name: "Green", value: 5, hex: "#008000"},
+    {name: "Blue", value: 6, hex: "#0000FF"},
+    {name: "Violet", value: 7, hex: "#8F00FF"},
+    {name: "Grey", value: 8, hex: "#808080"},
+    {name: "White", value: 9, hex: "#FFFFFF"}
+];
+
+// Multiplier options
+const multipliers = [
+    {name: "Black ×1", value: 1, hex: "#000000"},
+    {name: "Brown ×10", value: 10, hex: "#8B4513"},
+    {name: "Red ×100", value: 100, hex: "#FF0000"},
+    {name: "Orange ×1K", value: 1000, hex: "#FFA500"},
+    {name: "Yellow ×10K", value: 10000, hex: "#FFFF00"},
+    {name: "Green ×100K", value: 100000, hex: "#008000"},
+    {name: "Blue ×1M", value: 1000000, hex: "#0000FF"},
+    {name: "Violet ×10M", value: 10000000, hex: "#8F00FF"},
+    {name: "Gold ×0.1", value: 0.1, hex: "#D4AF37"},
+    {name: "Silver ×0.01", value: 0.01, hex: "#C0C0C0"}
+];
+
+// Tolerance options
+const tolerances = [
+    {name: "Brown ±1%", value: 1, hex: "#8B4513"},
+    {name: "Red ±2%", value: 2, hex: "#FF0000"},
+    {name: "Gold ±5%", value: 5, hex: "#D4AF37"},
+    {name: "Silver ±10%", value: 10, hex: "#C0C0C0"}
+];
+
+// Fill a dropdown
+function fillDropdown(id, options) {
+
+    let dropdown = document.getElementById(id);
+
+    options.forEach(option => {
+
+        let item = document.createElement("option");
+
+        item.value = option.value;
+        item.textContent = option.name;
+
+        dropdown.appendChild(item);
+
+    });
+}
+
+// Create dropdown options
+fillDropdown("band1", colours.slice(1));
+fillDropdown("band2", colours);
+fillDropdown("band3", multipliers);
+fillDropdown("band4", tolerances);
+
+// Update resistor colours
+function updateResistor() {
+
+    let selections = [
+        ["band1", "visual1", colours.slice(1)],
+        ["band2", "visual2", colours],
+        ["band3", "visual3", multipliers],
+        ["band4", "visual4", tolerances]
+    ];
+
+    selections.forEach(([selectId, visualId, options]) => {
+
+        let selected = document.getElementById(selectId).value;
+
+        let colour = options.find(
+            option => String(option.value) === selected
+        );
+
+        document.getElementById(visualId).style.backgroundColor =
+            colour.hex;
+
+    });
+}
+
+// Calculate resistance
+function calculateResistance() {
+
+    let first = Number(document.getElementById("band1").value);
+
+    let second = Number(document.getElementById("band2").value);
+
+    let multiplier = Number(document.getElementById("band3").value);
+
+    let tolerance = Number(document.getElementById("band4").value);
+
+    let resistance = (first * 10 + second) * multiplier;
+
+    let answer;
+
+    if (resistance >= 1000000) {
+        answer = (resistance / 1000000) + " MΩ";
+    }
+    else if (resistance >= 1000) {
+        answer = (resistance / 1000) + " kΩ";
+    }
+    else {
+        answer = resistance + " Ω";
+    }
+
+    document.getElementById("answer").textContent = answer;
+
+    document.getElementById("toleranceResult").textContent =
+        "Tolerance: ±" + tolerance + "%";
+
+    updateResistor();
+}
+
+// Update the resistor when colours change
+["band1", "band2", "band3", "band4"].forEach(id => {
+
+    document.getElementById(id).addEventListener(
+        "change", updateResistor
+    );
+
+});
+
+// Initial resistor appearance
+updateResistor();
+
+</script>
+
+function searchTopics() {
+
+    let input = document.getElementById("searchInput")
+        .value.toLowerCase();
+
+    let cards = document.querySelectorAll(".card");
+
+    let found = false;
+
+    cards.forEach(function(card) {
+
+        let content = card.innerText.toLowerCase();
+
+        if (content.includes(input)) {
+            card.style.display = "block";
+            found = true;
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+    if (input === "") {
+        cards.forEach(function(card) {
+            card.style.display = "block";
+        });
+
+        document.getElementById("searchMessage").innerText = "";
+    }
+    else if (!found) {
+        document.getElementById("searchMessage").innerText =
+            "Sorry! No matching topic found.";
+    }
+    else {
+        document.getElementById("searchMessage").innerText = "";
+    }
+}
+
+<div class="card">
+    <div class="icon">🎨</div>
+    <h3>Resistor Calculator</h3>
+    <p>Calculate resistor values using colour codes.</p>
+    <a href="resistor.html">Open Calculator →</a>
+</div>
+><section style="text-align:center; padding:30px; background:#eef2ff;">
+
+    <h2>Student Dashboard</h2>
+
+    <p>Manage student learning and registrations.</p>
+
+    <a href="student-dashboard.html"
+       style="background:#4338a8;
+       color:white;
+       padding:12px 22px;
+       border-radius:8px;
+       text-decoration:none;">
+
+       Open Dashboard →
+
+    </a>
+
+</section>
+<section style="text-align:center; padding:30px; background:#eef2ff;">
+    <h2>Student Dashboard</h2>
+    <p>Welcome to your student dashboard!</p>
+    <a href="student-dashboard.html">Open Dashboard →</a>
+</section>
+</body>
+</html>
+<div style="text-align:center; padding:25px;">
+    <h2>Digital Electronics</h2>
+    <p>Learn binary numbers and logic gates.</p>
+    <a href="digital-electronics.html"
+       style="background:#4338a8; color:white;
+       padding:12px 20px; text-decoration:none;
+       border-radius:8px;">
+       Start Learning →
+    </a>
+</div>
+
+<section style="padding:40px 20px; background:#eef2ff; text-align:center;">
+    <h2 style="color:#4338a8;">Electronics Subjects</h2>
+
+    <div class="card">
+        <h3>⚡ Basic Electronics</h3>
+        <p>Learn voltage, current and resistance.</p>
+        <a href="basic-electronics.html">Start Learning →</a>
+    </div>
+
+    
+<div class="card">
+    <div class="icon">🔌</div>
+    <h3>Electrical Basics</h3>
+    <p>Learn voltage, current, AC, DC and electrical circuits.</p>
+    <a href="electrical-basics.html">
+        Start Learning →
+    </a>
+</div>
+
+
+    <div class="card">
+        <h3>📡 Communication Systems</h3>
+        <p>Learn signals, modulation and antennas.</p>
+        <a href="communication-systems.html">Start Learning →</a>
+    </div>
+
+    <div class="card">
+        <h3>🔢 Digital Electronics</h3>
+        <p>Learn binary numbers and logic gates.</p>
+        <a href="digital-electronics.html">Start Learning →</a>
+    </div>
+</section>
+
+<div class="card">
+    <div class="icon">💻</div>
+    <h3>C Programming</h3>
+    <p>Learn C from basics, variables, loops and functions.</p>
+    <a href="c-programming.html">Start Learning →</a>
+</div>
+<section style="padding:40px 20px; text-align:center; background:#eef2ff;">
+
+    <h2 style="color:#4338a8;">Artificial Intelligence & Technology</h2>
+
+    <div class="card">
+        <div class="icon">🤖</div>
+        <h3>AI & Machine Learning</h3>
+        <p>
+            Learn Artificial Intelligence, Machine Learning,
+            Deep Learning and beginner projects.
+        </p>
+        <a href="ai-ml.html">Start Learning →</a>
+    </div>
+
+</section>
+<section style="text-align:center; padding:30px;">
+    <h2>ECE Practice Quiz</h2>
+    <p>Test your knowledge with our interactive quiz.</p>
+    <a href="ece-quiz.html">Start Quiz →</a>
+</section>
+
+<section style="padding:40px 20px; text-align:center; background:#eef2ff;">
+
+    <h2 style="color:#4338a8;">📡 Communication Systems</h2>
+
+    <div class="card">
+        <h3>Communication Systems</h3>
+        <p>
+            Learn signals, modulation, demodulation,
+            antennas and wireless communication.
+        </p>
+
+        <a href="communication-systems.html">
+            Start Learning →
+        </a>
+    </div>
+
+</section>
+
+<section style="padding:40px 20px; background:#f1f5ff; text-align:center;">
+
+    <h2 style="color:#4338a8;">📚 Explore All Courses</h2>
+    <p>Choose a subject and start learning!</p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; max-width:1000px; margin:25px auto;">
+
+        <div class="card">
+            <h3>⚡ Basic Electronics</h3>
+            <a href="basic-electronics.html">Start Learning →</a>
+        </div>
+
+        <div class="card">
+            <h3>🔌 Electrical Basics</h3>
+            <a href="electrical-basics.html">Start Learning →</a>
+        </div>
+
+        <div class="card">
+            <h3>📡 Communication Systems</h3>
+            <a href="communication-systems.html">Start Learning →</a>
+        </div>
+
+        <div class="card">
+            <h3>🔢 Digital Electronics</h3>
+            <a href="digital-electronics.html">Start Learning →</a>
+        </div>
+
+        <div class="card">
+            <h3>💻 C Programming</h3>
+            <a href="c-programming.html">Start Learning →</a>
+        </div>
+
+        <div class="card">
+            <h3>🐍 Python Programming</h3>
+            <a href="python-programming.html">Start Learning →</a>
+        </div>
+
+        <div class="card">
+            <h3>🤖 AI & Machine Learning</h3>
+            <a href="ai-ml.html">Start Learning →</a>
+        </div>
+
+        <div class="card">
+            <h3>🎨 Resistor Calculator</h3>
+            <a href="resistor.html">Open Calculator →</a>
+        </div>
+
+        <div class="card">
+            <h3>📝 ECE Practice Quiz</h3>
+            <a href="ece-quiz.html">Start Quiz →</a>
+        </div>
+
+    </div>
+</section>
+<  

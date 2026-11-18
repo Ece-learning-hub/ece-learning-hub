@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Machine Learning | ECE Learning Hub</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f4ff;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(120deg, #172554, #4338a8);
+            color: white;
+            text-align: center;
+            padding: 40px 15px;
+        }
+
+        nav {
+            background: #1e1b4b;
+            text-align: center;
+            padding: 14px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .lesson {
+            background: white;
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #00000012;
+        }
+
+        h2 {
+            color: #4338a8;
+        }
+
+        .note {
+            background: #eef2ff;
+            padding: 15px;
+            border-left: 4px solid #4338a8;
+            border-radius: 6px;
+        }
+
+        pre {
+            background: #172554;
+            color: #e0e7ff;
+            padding: 18px;
+            border-radius: 9px;
+            overflow-x: auto;
+        }
+
+        button {
+            background: #4338a8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 6px;
+        }
+
+        button:hover {
+            background: #312e81;
+        }
+
+        #quizResult {
+            font-weight: bold;
+        }
+
+        footer {
+            background: #1e1b4b;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Artificial Intelligence & Machine Learning</h1>
+    <p>Explore the Future of Technology</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#ai">AI</a>
+    <a href="#ml">Machine Learning</a>
+    <a href="#deep">Deep Learning</a>
+    <a href="#quiz">Quiz</a>
+</nav>
+
+<div class="container">
+
+    <section class="lesson" id="ai">
+        <h2>1. What is Artificial Intelligence?</h2>
+
+        <p>
+            Artificial Intelligence (AI) is a field of computer
+            science that develops systems capable of performing
+            tasks that normally require human intelligence.
+        </p>
+
+        <p><b>Examples:</b></p>
+        <ul>
+            <li>Voice assistants</li>
+            <li>Face recognition</li>
+            <li>Self-driving technology</li>
+            <li>Chatbots</li>
+            <li>Recommendation systems</li>
+        </ul>
+
+        <p><b>Telugu:</b> Manushulu chese konni intelligent
+        tasks ni computers tho cheyinchadam AI yokka main goal.</p>
+    </section>
+
+    <section class="lesson" id="ml">
+        <h2>2. What is Machine Learning?</h2>
+
+        <p>
+            Machine Learning (ML) is a branch of AI that allows
+            computers to learn patterns from data and make
+            predictions or decisions.
+        </p>
+
+        <div class="note">
+            Example: An email system learns to identify
+            spam messages from examples.
+        </div>
+
+        <p><b>Telugu:</b> Data nundi patterns nerchukoni
+        predictions cheyadam Machine Learning.</p>
+    </section>
+
+    <section class="lesson">
+        <h2>3. Types of Machine Learning</h2>
+
+        <h3>Supervised Learning</h3>
+        <p>
+            The model learns from labelled examples.
+            Example: Predicting house prices using past data.
+        </p>
+
+        <h3>Unsupervised Learning</h3>
+        <p>
+            The model finds patterns in data without labels.
+            Example: Grouping customers by their shopping habits.
+        </p>
+
+        <h3>Reinforcement Learning</h3>
+        <p>
+            An agent learns by receiving rewards or penalties
+            for its actions.
+        </p>
+    </section>
+
+    <section class="lesson" id="deep">
+        <h2>4. What is Deep Learning?</h2>
+
+        <p>
+            Deep Learning is a part of Machine Learning that
+            uses multi-layer neural networks to learn complex
+            patterns.
+        </p>
+
+        <p><b>Applications:</b></p>
+        <ul>
+            <li>Image recognition</li>
+            <li>Speech recognition</li>
+            <li>Medical image analysis</li>
+            <li>Language processing</li>
+        </ul>
+    </section>
+
+    <section class="lesson">
+        <h2>5. AI vs ML vs Deep Learning</h2>
+
+        <ul>
+            <li><b>AI:</b> The broader field of intelligent systems.</li>
+            <li><b>ML:</b> A branch of AI that learns from data.</li>
+            <li><b>Deep Learning:</b> A branch of ML using deep neural networks.</li>
+        </ul>
+
+        <div class="note">
+            Remember: Deep Learning is part of Machine Learning,
+            and Machine Learning is part of Artificial Intelligence.
+        </div>
+    </section>
+
+    <section class="lesson">
+        <h2>6. Python Libraries for AI & ML</h2>
+
+        <ul>
+            <li><b>NumPy:</b> Numerical calculations.</li>
+            <li><b>Pandas:</b> Data handling and analysis.</li>
+            <li><b>Matplotlib:</b> Data visualization.</li>
+            <li><b>Scikit-learn:</b> Machine Learning models.</li>
+            <li><b>TensorFlow:</b> Machine Learning and Deep Learning.</li>
+        </ul>
+    </section>
+
+    <section class="lesson">
+        <h2>7. Beginner AI & ML Projects</h2>
+
+        <ol>
+            <li>Spam email detection</li>
+            <li>House price prediction</li>
+            <li>Student marks prediction</li>
+            <li>Handwritten digit recognition</li>
+            <li>Plastic waste image classification</li>
+        </ol>
+
+        <div class="note">
+            <b>Project idea:</b> You can explore a plastic waste
+            detection project using Python and image classification.
+        </div>
+    </section>
+
+    <section class="lesson" id="quiz">
+        <h2>8. Test Your Knowledge</h2>
+
+        <p>Which of the following is a branch of AI?</p>
+
+        <button onclick="checkAnswer('ML')">Machine Learning</button>
+        <button onclick="checkAnswer('HTML')">HTML</button>
+        <button onclick="checkAnswer('CSS')">CSS</button>
+
+        <p id="quizResult"></p>
+    </section>
+
+    <section class="lesson">
+        <h2>9. Learning Roadmap</h2>
+
+        <ol>
+            <li>Learn Python basics.</li>
+            <li>Learn mathematics and statistics fundamentals.</li>
+            <li>Learn NumPy and Pandas.</li>
+            <li>Learn Machine Learning algorithms.</li>
+            <li>Build beginner projects.</li>
+            <li>Explore Deep Learning.</li>
+        </ol>
+    </section>
+
+</div>
+
+<footer>
+    <p>ECE Learning Hub | Learn Today, Build Tomorrow!</p>
+</footer>
+
+<script>
+    function checkAnswer(answer) {
+        let result = document.getElementById("quizResult");
+
+        if (answer === "ML") {
+            result.innerText = "Correct! Excellent work!";
+            result.style.color = "green";
+        } else {
+            result.innerText = "Try again! ML is a branch of AI.";
+            result.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>

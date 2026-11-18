@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Basic Electronics | ECE Learning Hub</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7ff;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(120deg, #101c46, #4935a8);
+    color: white;
+    padding: 22px 8%;
+}
+
+header h2 {
+    display: inline-block;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    float: right;
+}
+
+.hero {
+    background: linear-gradient(120deg, #182c65, #6545bd);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.lesson {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.lesson h2 {
+    color: #4338a8;
+    margin-bottom: 15px;
+}
+
+.telugu {
+    background: #eef2ff;
+    border-left: 4px solid #6545bd;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.formula {
+    background: #e0f2fe;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #075985;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.quiz-option {
+    display: block;
+    padding: 12px;
+    margin: 10px 0;
+    background: #f1f5f9;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.quiz-option:hover {
+    background: #e0e7ff;
+}
+
+button {
+    padding: 12px 25px;
+    background: #4338a8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#quizResult {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #101c46;
+    color: white;
+}
+
+@media(max-width: 600px) {
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    header a {
+        float: none;
+        display: block;
+        margin-top: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>ECE Learning Hub</h2>
+    <a href="index.html">← Back to Home</a>
+</header>
+
+<section class="hero">
+    <h1>Basic Electronics</h1>
+    <p>Understand electronics from the beginning!</p>
+</section>
+
+<div class="container">
+
+    <section class="lesson">
+        <h2>1. What is Electronics?</h2>
+
+        <p>
+            Electronics is a branch of science and engineering
+            that deals with the control and flow of electrical
+            signals using electronic components.
+        </p>
+
+        <div class="telugu">
+            <b>తెలుగులో:</b><br>
+            ఎలక్ట్రానిక్స్ అనేది విద్యుత్ సంకేతాలను
+            నియంత్రించడం మరియు ఉపయోగించడం గురించి
+            అధ్యయనం చేసే శాస్త్రం.
+        </div>
+    </section>
+
+    <section class="lesson">
+        <h2>2. Voltage (వోల్టేజ్)</h2>
+
+        <p>
+            Voltage is the electrical potential difference
+            between two points. It pushes electric charge
+            through a circuit.
+        </p>
+
+        <p><b>Symbol:</b> V</p>
+        <p><b>Unit:</b> Volt (V)</p>
+
+        <div class="telugu">
+            <b>తెలుగులో:</b><br>
+            వోల్టేజ్ అనేది విద్యుత్ ప్రవాహాన్ని
+            నడిపించే పీడనం లాంటిది.
+            దీని యూనిట్ Volt.
+        </div>
+    </section>
+
+    <section class="lesson">
+        <h2>3. Current (కరెంట్)</h2>
+
+        <p>
+            Electric current is the rate of flow of
+            electric charge through a conductor.
+        </p>
+
+        <p><b>Symbol:</b> I</p>
+        <p><b>Unit:</b> Ampere (A)</p>
+
+        <div class="telugu">
+            <b>తెలుగులో:</b><br>
+            ఒక కండక్టర్ ద్వారా విద్యుత్ ఛార్జ్
+            ప్రవహించే రేటును కరెంట్ అంటారు.
+            దీని యూనిట్ Ampere.
+        </div>
+    </section>
+
+    <section class="lesson">
+        <h2>4. Resistance (రెసిస్టెన్స్)</h2>
+
+        <p>
+            Resistance is the opposition offered by a
+            material to the flow of electric current.
+        </p>
+
+        <p><b>Symbol:</b> R</p>
+        <p><b>Unit:</b> Ohm (Ω)</p>
+
+        <div class="telugu">
+            <b>తెలుగులో:</b><br>
+            విద్యుత్ ప్రవాహాన్ని వ్యతిరేకించే
+            గుణాన్ని రెసిస్టెన్స్ అంటారు.
+            దీని యూనిట్ Ohm.
+        </div>
+    </section>
+
+    <section class="lesson">
+        <h2>5. Ohm's Law</h2>
+
+        <p>
+            Ohm's Law states that current is directly
+            proportional to voltage when temperature
+            and other physical conditions remain constant.
+        </p>
+
+        <div class="formula">
+            V = I × R
+        </div>
+
+        <p><b>Current formula:</b> I = V / R</p>
+        <p><b>Resistance formula:</b> R = V / I</p>
+
+        <div class="telugu">
+            <b>తెలుగులో:</b><br>
+            ఉష్ణోగ్రత స్థిరంగా ఉన్నప్పుడు,
+            కరెంట్ వోల్టేజ్‌కు అనులోమానుపాతంలో ఉంటుంది.
+            ఇదే ఓమ్స్ నియమం.
+        </div>
+
+        <p><b>Example:</b></p>
+        <p>Voltage = 12 V</p>
+        <p>Resistance = 4 Ω</p>
+        <p>Current = 12 / 4 = 3 A</p>
+    </section>
+
+    <section class="lesson">
+        <h2>6. Test Your Knowledge!</h2>
+
+        <p><b>Question:</b> What is the unit of resistance?</p>
+
+        <label class="quiz-option">
+            <input type="radio" name="answer" value="A">
+            Ampere
+        </label>
+
+        <label class="quiz-option">
+            <input type="radio" name="answer" value="B">
+            Volt
+        </label>
+
+        <label class="quiz-option">
+            <input type="radio" name="answer" value="C">
+            Ohm
+        </label>
+
+        <button onclick="checkAnswer()">Submit Answer</button>
+
+        <p id="quizResult"></p>
+    </section>
+
+    <section class="lesson">
+        <h2>Practice More</h2>
+
+        <p>Try your electronics calculators:</p>
+
+        <p>
+            <a href="index.html#calculators">
+                Open Ohm's Law Calculator
+            </a>
+        </p>
+
+        <p>
+            <a href="resistor.html">
+                Open Resistor Colour Code Calculator
+            </a>
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    <h3>ECE Learning Hub</h3>
+    <p>Learn Today. Build Tomorrow.</p>
+</footer>
+
+<script>
+function checkAnswer() {
+
+    let selected = document.querySelector(
+        'input[name="answer"]:checked'
+    );
+
+    let result = document.getElementById("quizResult");
+
+    if (selected === null) {
+        result.innerText = "Please select an answer!";
+        result.style.color = "red";
+    }
+
+    else if (selected.value === "C") {
+        result.innerText = "Correct answer! Well done!";
+        result.style.color = "green";
+    }
+
+    else {
+        result.innerText = "Incorrect! Try again.";
+        result.style.color = "red";
+    }
+}
+</script>
+
+</body>
+</html>

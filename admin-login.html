@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login - ECE Learning Hub</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #312e81, #6366f1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .login-box {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 5px 20px #222;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4338ca;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        #message {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <h2>Admin Login 🔐</h2>
+    <p>ECE Learning Hub</p>
+
+    <form id="loginForm">
+
+<input type="email" id="email" name="email" autocomplete="username">            placeholder="Admin Email"
+            required
+        >
+
+        <input type="password" id="password" name="password" autocomplete="current-password">
+            placeholder="Password"
+            required
+        >
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <a href="index.html">Back to Home</a>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL = "https://iremwvswmqufwikotunp.supabase.co";
+const SUPABASE_KEY = "sb_publishable_S8pDsx5Nc5ukjXuckoZSNg_s3RJU3Pk";
+
+const database = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
+
+document.getElementById("loginForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+    const message = document.getElementById("message");
+
+    message.innerText = "Checking login...";
+    message.style.color = "black";
+
+    const { data, error } = await database.auth.signInWithPassword({
+        email: email,
+        password: password
+    });
+
+    if (error) {
+        console.error(error);
+        message.style.color = "red";
+        message.innerText = error.message;
+    } else {
+        message.style.color = "green";
+        message.innerText = "Login successful!";
+
+        console.log("Session exists:", !!data.session);
+
+       // window.location.href = "student-dashboard.html";
+    }
+});
+
+</script>
+</body>
+</html>

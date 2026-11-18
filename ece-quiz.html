@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECE Practice Quiz</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2ff;
+            margin: 0;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(120deg, #172554, #4338a8);
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        .quiz-container {
+            max-width: 700px;
+            background: white;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #00000018;
+        }
+
+        .question {
+            margin: 25px 0;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin: 12px 0;
+            cursor: pointer;
+        }
+
+        button {
+            background: #4338a8;
+            color: white;
+            border: none;
+            padding: 13px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #312e81;
+        }
+
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        nav {
+            text-align: center;
+            padding: 15px;
+            background: #1e1b4b;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>ECE Practice Quiz</h1>
+    <p>Test your Electronics knowledge!</p>
+</header>
+
+<nav>
+    <a href="index.html">← Back to Home</a>
+</nav>
+
+<div class="quiz-container">
+
+    <h2>Basic ECE Questions</h2>
+    <p>Select one answer for each question.</p>
+
+    <form id="quizForm">
+
+        <div class="question">
+            <h3>1. What is the unit of resistance?</h3>
+            <label><input type="radio" name="q1" value="A"> Volt</label>
+            <label><input type="radio" name="q1" value="B"> Ohm</label>
+            <label><input type="radio" name="q1" value="C"> Ampere</label>
+        </div>
+
+        <div class="question">
+            <h3>2. What is the binary value of decimal 2?</h3>
+            <label><input type="radio" name="q2" value="A"> 10</label>
+            <label><input type="radio" name="q2" value="B"> 11</label>
+            <label><input type="radio" name="q2" value="C"> 01</label>
+        </div>
+
+        <div class="question">
+            <h3>3. Which component stores electrical charge?</h3>
+            <label><input type="radio" name="q3" value="A"> Resistor</label>
+            <label><input type="radio" name="q3" value="B"> Diode</label>
+            <label><input type="radio" name="q3" value="C"> Capacitor</label>
+        </div>
+
+        <div class="question">
+            <h3>4. Which language is commonly used in embedded systems?</h3>
+            <label><input type="radio" name="q4" value="A"> C</label>
+            <label><input type="radio" name="q4" value="B"> HTML</label>
+            <label><input type="radio" name="q4" value="C"> CSS</label>
+        </div>
+
+        <div class="question">
+            <h3>5. Which gate produces the opposite of its input?</h3>
+            <label><input type="radio" name="q5" value="A"> AND</label>
+            <label><input type="radio" name="q5" value="B"> NOT</label>
+            <label><input type="radio" name="q5" value="C"> OR</label>
+        </div>
+
+        <button type="button" onclick="checkQuiz()">Submit Answers</button>
+
+    </form>
+
+    <p id="result"></p>
+    <button type="button" onclick="location.reload()">Try Again</button>
+
+</div>
+
+<script>
+    function checkQuiz() {
+        let answers = {
+            q1: "B",
+            q2: "A",
+            q3: "C",
+            q4: "A",
+            q5: "B"
+        };
+
+        let score = 0;
+
+        for (let question in answers) {
+            let selected = document.querySelector(
+                'input[name="' + question + '"]:checked'
+            );
+
+            if (selected && selected.value === answers[question]) {
+                score++;
+            }
+        }
+
+        document.getElementById("result").innerText =
+            "Your Score: " + score + " / 5";
+    }
+</script>
+
+</body>
+</html>

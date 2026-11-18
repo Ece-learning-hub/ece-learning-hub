@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming | ECE Learning Hub</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f4ff;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(120deg, #172554, #4338a8);
+            color: white;
+            text-align: center;
+            padding: 40px 15px;
+        }
+
+        nav {
+            background: #1e1b4b;
+            text-align: center;
+            padding: 14px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .lesson {
+            background: white;
+            padding: 22px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #00000012;
+        }
+
+        h2 {
+            color: #4338a8;
+        }
+
+        pre {
+            background: #172554;
+            color: #e0e7ff;
+            padding: 18px;
+            border-radius: 9px;
+            overflow-x: auto;
+        }
+
+        .note {
+            background: #eef2ff;
+            padding: 15px;
+            border-left: 4px solid #4338a8;
+            border-radius: 6px;
+        }
+
+        button {
+            background: #4338a8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 6px;
+        }
+
+        button:hover {
+            background: #312e81;
+        }
+
+        #quizResult {
+            font-weight: bold;
+        }
+
+        footer {
+            background: #1e1b4b;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>C Programming</h1>
+    <p>Learn Programming from Zero</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#intro">Introduction</a>
+    <a href="#program">First Program</a>
+    <a href="#variables">Variables</a>
+    <a href="#quiz">Quiz</a>
+</nav>
+
+<div class="container">
+
+    <section class="lesson" id="intro">
+        <h2>1. What is C Programming?</h2>
+
+        <p>
+            C is a general-purpose programming language
+            used to develop software, operating systems
+            and embedded systems.
+        </p>
+
+        <p><b>Features of C:</b></p>
+        <ul>
+            <li>Simple and powerful language</li>
+            <li>Fast execution</li>
+            <li>Structured programming</li>
+            <li>Portable across different systems</li>
+            <li>Useful for embedded systems</li>
+        </ul>
+
+        <p><b>Telugu:</b> C anedhi oka programming language.
+        Computer ki instructions ivvadaniki C language use chestham.</p>
+    </section>
+
+    <section class="lesson">
+        <h2>2. Where is C Used?</h2>
+
+        <ul>
+            <li>Operating systems</li>
+            <li>Embedded systems</li>
+            <li>Microcontrollers</li>
+            <li>Device drivers</li>
+            <li>System software</li>
+        </ul>
+
+        <div class="note">
+            <b>ECE Connection:</b>
+            C programming is useful for microcontrollers
+            and embedded systems.
+        </div>
+    </section>
+
+    <section class="lesson" id="program">
+        <h2>3. Your First C Program</h2>
+
+        <p>Let's write a simple C program.</p>
+
+        <pre>
+#include &lt;stdio.h&gt;
+
+int main()
+{
+    printf("Hello World!");
+
+    return 0;
+}
+        </pre>
+
+        <h3>Explanation</h3>
+
+        <ul>
+            <li><b>#include &lt;stdio.h&gt;</b> - Includes standard input/output functions.</li>
+            <li><b>int main()</b> - The main function where execution begins.</li>
+            <li><b>printf()</b> - Displays output on the screen.</li>
+            <li><b>return 0;</b> - Indicates successful program completion.</li>
+        </ul>
+
+        <p><b>Telugu:</b> printf() use chesi screen meedha
+        message display cheyochu.</p>
+
+        <div class="note">
+            Expected Output: <b>Hello World!</b>
+        </div>
+    </section>
+
+    <section class="lesson" id="variables">
+        <h2>4. Variables in C</h2>
+
+        <p>
+            A variable is a named memory location used
+            to store a value.
+        </p>
+
+        <pre>
+int age = 20;
+float price = 25.5;
+char grade = 'A';
+        </pre>
+
+        <p><b>Telugu:</b> Data ni memory lo store cheyadaniki
+        variables use chestham.</p>
+    </section>
+
+    <section class="lesson">
+        <h2>5. Data Types in C</h2>
+
+        <p>Data types tell the compiler what kind of data
+        a variable stores.</p>
+
+        <ul>
+            <li><b>int</b> - Stores whole numbers.</li>
+            <li><b>float</b> - Stores decimal numbers.</li>
+            <li><b>char</b> - Stores a single character.</li>
+            <li><b>double</b> - Stores decimal numbers with more precision.</li>
+        </ul>
+
+        <pre>
+int number = 10;
+float marks = 85.5;
+char letter = 'A';
+double value = 123.456789;
+        </pre>
+    </section>
+
+    <section class="lesson">
+        <h2>6. Operators in C</h2>
+
+        <p>Operators perform operations on values.</p>
+
+        <ul>
+            <li>+ Addition</li>
+            <li>- Subtraction</li>
+            <li>* Multiplication</li>
+            <li>/ Division</li>
+            <li>% Remainder</li>
+        </ul>
+
+        <pre>
+int a = 10;
+int b = 5;
+
+printf("%d", a + b);
+        </pre>
+
+        <p>Output: 15</p>
+    </section>
+
+    <section class="lesson">
+        <h2>7. If-Else Statement</h2>
+
+        <p>
+            If-else is used to make decisions in a program.
+        </p>
+
+        <pre>
+int age = 18;
+
+if (age >= 18)
+{
+    printf("Eligible");
+}
+else
+{
+    printf("Not Eligible");
+}
+        </pre>
+
+        <p><b>Telugu:</b> Condition true ayithe if block
+        execute avuthundhi. False ayithe else block execute avuthundhi.</p>
+    </section>
+
+    <section class="lesson">
+        <h2>8. Loops in C</h2>
+
+        <p>Loops repeat a block of code.</p>
+
+        <h3>For Loop</h3>
+
+        <pre>
+for (int i = 1; i <= 5; i++)
+{
+    printf("%d", i);
+}
+        </pre>
+
+        <p>Output: 12345</p>
+
+        <h3>While Loop</h3>
+
+        <pre>
+int i = 1;
+
+while (i <= 5)
+{
+    printf("%d", i);
+    i++;
+}
+        </pre>
+    </section>
+
+    <section class="lesson" id="quiz">
+        <h2>9. Test Your Knowledge</h2>
+
+        <p>Which function is used to display output in C?</p>
+
+        <button onclick="checkAnswer('printf')">printf()</button>
+        <button onclick="checkAnswer('scanf')">scanf()</button>
+        <button onclick="checkAnswer('main')">main()</button>
+
+        <p id="quizResult"></p>
+    </section>
+
+    <section class="lesson">
+        <h2>10. Practice Exercise</h2>
+
+        <p>Try writing these programs yourself:</p>
+
+        <ol>
+            <li>Print your name.</li>
+            <li>Add two numbers.</li>
+            <li>Find whether a number is even or odd.</li>
+            <li>Print numbers from 1 to 10.</li>
+        </ol>
+
+        <p><b>Remember:</b> Practice every day to improve your programming skills!</p>
+    </section>
+
+</div>
+
+<footer>
+    <p>ECE Learning Hub | Learn Today, Build Tomorrow!</p>
+</footer>
+
+<script>
+    function checkAnswer(answer) {
+        let result = document.getElementById("quizResult");
+
+        if (answer === "printf") {
+            result.innerText = "Correct! Well done!";
+            result.style.color = "green";
+        } else {
+            result.innerText = "Try again! printf() displays output.";
+            result.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>

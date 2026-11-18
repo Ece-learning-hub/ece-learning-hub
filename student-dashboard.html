@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - ECE Learning Hub</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+        }
+
+        header {
+            background: #4338a8;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .panel {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #0001;
+            overflow-x: auto;
+        }
+
+        button {
+            background: #4338a8;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #eef2ff;
+        }
+
+        #message {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>ECE Learning Hub</h1>
+    <h2>Admin Dashboard</h2>
+    <div class="stats-card">
+    <h3>Total Registered Students</h3>
+    <h2 id="totalStudents">0</h2>
+</div>
+</header>
+
+
+<div class="container">
+    <div class="panel">
+        <h2>Welcome, Admin!</h2>
+        <button id="logoutButton">Logout</button>
+
+        <h3>Registered Students</h3>
+        <p id="message">Checking admin access...</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Course</th>
+                    <th>Registered Date</th>
+                </tr>
+            </thead>
+            <tbody id="studentList"></tbody>
+        </table>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL = "https://iremwvswmqufwikotunp.supabase.co";
+const SUPABASE_KEY = "sb_publishable_S8pDsx5Nc5ukjXuckoZSNg_s3RJU3Pk";
+
+const database = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
+
+async function loadDashboard() {
+    const message = document.getElementById("message");
+
+    const { data: userData, error: userError } =
+        await database.auth.getUser();
+console.log("Dashboard user:", userData.user);
+console.log("Dashboard error:", userError);
+    if (userError || !userData.user) {
+        window.location.href = "admin-login.html";
+        return;
+    }
+
+    const user = userData.user;
+
+    const { data: admin, error: adminError } = await database
+        .from("admin_users")
+        .select("user_id")
+        .eq("user_id", user.id)
+        .maybeSingle();
+
+    if (adminError || !admin) {
+        message.innerText = "Access denied. Admin permission required.";
+        return;
+    }
+
+    message.innerText = "Loading student records...";
+
+    const { data: students, error: studentError } = await database
+        .from("student_registrations")
+        .select("full_name, email, course, created_at")
+        .order("created_at", { ascending: false });
+
+    if (studentError) {
+        message.innerText = "Could not load student records.";
+        console.error(studentError);
+        return;
+    }
+
+    const studentList = document.getElementById("studentList");
+    studentList.replaceChildren();
+
+    if (!students || students.length === 0) {
+        message.innerText = "No student registrations found.";
+        return;
+    }
+
+    students.forEach(function(student) {
+        const row = document.createElement("tr");
+
+        [
+            student.full_name,
+            student.email,
+            student.course,
+            student.created_at
+                ? new Date(student.created_at).toLocaleDateString()
+                : "Not available"
+        ].forEach(function(value) {
+            const cell = document.createElement("td");
+            cell.textContent = value || "";
+            row.appendChild(cell);
+        });
+
+        studentList.appendChild(row);
+    });
+
+    message.innerText = "Student records loaded successfully!";
+}
+
+document.getElementById("logoutButton").addEventListener("click", async function() {
+    await database.auth.signOut();
+    window.location.href = "admin-login.html";
+});
+
+loadDashboard();
+</script>
+
+</body>
+</html>

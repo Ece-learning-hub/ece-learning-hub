@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://ece-learning-hub.github.io/ece-learning-hub/</loc>
+    </url>
+
+    <url>
+        <loc>https://ece-learning-hub.github.io/ece-learning-hub/basic-electronics.html</loc>
+    </url>
+
+    <url>
+        <loc>https://ece-learning-hub.github.io/ece-learning-hub/digital-electronics.html</loc>
+    </url>
+
+    <url>
+        <loc>https://ece-learning-hub.github.io/ece-learning-hub/electrical-basics.html</loc>
+    </url>
+
+    <url>
+        <loc>https://ece-learning-hub.github.io/ece-learning-hub/communication-systems.html</loc>
+    </url>
+
+    <url>
+        <loc>https://ece-learning-hub.github.io/ece-learning-hub/c-programming.html</loc>
+    </url>
+
+    <url>
+        <loc>https://ece-learning-hub.github.io/ece-learning-hub/python-programming.html</loc>
+    </url>
+
+    <url>
+        <loc>https://ece-learning-hub.github.io/ece-learning-hub/ai-ml.html</loc>
+    </url>
+
+    <url>
+        <loc>https://ece-learning-hub.github.io/ece-learning-hub/resistor.html</loc>
+    </url>
+
+    <url>
+        <loc>https://ece-learning-hub.github.io/ece-learning-hub/ece-quiz.html</loc>
+    </url>
+
+</urlset>
